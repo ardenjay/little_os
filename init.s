@@ -7,7 +7,8 @@
 .equ ABT_MOD,		0x17
 .equ UND_MOD,		0x1b
 
-.equ MEM_SIZE,		0x1000000
+// From versatilepb.c in qemu, SDRAM at address 0
+.equ MEM_SIZE,		0x8000000				// 128M
 .equ DDR_START,		0x0
 .equ _SVC_STACK,	(DDR_START+MEM_SIZE-4)
 .equ _IRQ_STACK,	(_SVC_STACK-0x400)		// 1K
