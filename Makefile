@@ -1,7 +1,7 @@
 CC = arm-linux-gnueabi-gcc
 AS = arm-linux-gnueabi-as
 LD = arm-linux-gnueabi-ld
-OBJCOPY = arm-none-eabi-objcopy
+OBJCOPY = arm-linux-gnueabi-objcopy
 
 CFLAGS = -g
 ASFLAGS = -g
