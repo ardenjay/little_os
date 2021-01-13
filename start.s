@@ -1,6 +1,5 @@
 .section .startup
 .code 32
-.align
 .global _start
 
 .extern __vector_reset
@@ -13,14 +12,14 @@
 .extern __vector_fiq
 
 _start:
-ldr pc, _vector_reset
-ldr pc, _vector_undefined
-ldr pc, _vector_swi
-ldr pc, _vector_prefetch_abort
-ldr pc, _vector_data_abort
-ldr pc, _vector_reserved
-ldr pc, _vector_irq
-ldr pc, _vector_fiq
+	ldr pc, _vector_reset
+	ldr pc, _vector_undefined
+	ldr pc, _vector_swi
+	ldr pc, _vector_prefetch_abort
+	ldr pc, _vector_data_abort
+	ldr pc, _vector_reserved
+	ldr pc, _vector_irq
+	ldr pc, _vector_fiq
 
 .align 4
 
