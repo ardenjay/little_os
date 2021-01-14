@@ -1,2 +1,2 @@
 #!/bin/sh
-qemu-system-arm -M versatilepb -nographic -kernel little_os.bin
+qemu-system-arm -M versatilepb -serial stdio -kernel little_os.bin

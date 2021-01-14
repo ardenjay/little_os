@@ -11,6 +11,11 @@
 .extern __vector_irq
 .extern __vector_fiq
 
+.global vectors_start
+.global vectors_end
+
+vectors_start:
+
 _start:
 	ldr pc, _vector_reset
 	ldr pc, _vector_undefined
@@ -31,3 +36,7 @@ _vector_data_abort: .word __vector_data_abort
 _vector_reserved: .word __vector_reserved
 _vector_irq: .word __vector_irq
 _vector_fiq: .word __vector_fiq
+
+vectors_end:
+
+.end

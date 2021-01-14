@@ -3,7 +3,7 @@ AS = arm-linux-gnueabi-as
 LD = arm-linux-gnueabi-ld
 OBJCOPY = arm-linux-gnueabi-objcopy
 
-CFLAGS = -g
+CFLAGS = -g -I.
 ASFLAGS = -g
 LDFLAGS = -Tlinker.lds
 

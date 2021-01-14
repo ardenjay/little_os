@@ -53,11 +53,12 @@ _clear_bss:
 	beq _main
 	str r2, [r1], #0x4
 	b 1b
-
 _main:
+	bl copy_vectors
+	bl enable_irq
 	b plat_boot
 
-_bss_start_:	.word 	__bss_start__
-_bss_end_: 		.word	__bss_end__
+_bss_start_:	.word   __bss_start__
+_bss_end_:		.word   __bss_end__
 
 .end
