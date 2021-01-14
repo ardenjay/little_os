@@ -26,7 +26,7 @@ void copy_vectors(void) {
 		*vectors_dst++ = *vectors_src++;
 }
 
-void __attribute__((interrupt)) irq_handler() {
+void irq_handler() {
 	/* echo the received character + 1 */
 	UART0_DR = UART0_DR + 1;
 }
@@ -40,7 +40,7 @@ void enable_irq(void) {
 	);
 }
 
-void __attribute__((interrupt)) common_irq_handler(void) {
+void common_irq_handler(void) {
 	irq_handler();
 }
 
