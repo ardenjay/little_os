@@ -4,3 +4,5 @@
 
 #define VIC_BASE_ADDR 0x10140000
 #define VIC_INTENABLE (*((volatile uint32_t *)(VIC_BASE_ADDR + 0x010)))
+
+extern void irq_handler();

@@ -1,5 +1,5 @@
 #include <stdint.h>
-#include <versatilepb.h>
+#include <machine/versatilepb.h>
 
 typedef void (*init_func)(void);
 
@@ -24,11 +24,6 @@ void copy_vectors(void) {
 
 	while(vectors_src < &vectors_end)
 		*vectors_dst++ = *vectors_src++;
-}
-
-void irq_handler() {
-	/* echo the received character + 1 */
-	UART0_DR = UART0_DR + 1;
 }
 
 void enable_irq(void) {
