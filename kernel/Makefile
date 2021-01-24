@@ -1,13 +1,13 @@
-export CC = arm-linux-gnueabi-gcc
-export AS = arm-linux-gnueabi-as
-export LD = arm-linux-gnueabi-ld
-OBJCOPY = arm-linux-gnueabi-objcopy
+export CC = arm-none-eabi-gcc
+export AS = arm-none-eabi-as
+export LD = arm-none-eabi-ld
+OBJCOPY = arm-none-eabi-objcopy
 
-export CFLAGS = -g -I.
+export CFLAGS = -g3 -I. -I./include/
 ASFLAGS = -g
 LDFLAGS = -Tlinker.lds
 
-OBJS = init.o start.o boot.o abnormal.o machine/machine.o
+OBJS = init.o start.o boot.o abnormal.o machine/machine.o printk.o
 
 all: machine.o little_os.elf
 

@@ -3,5 +3,20 @@
 		"**/*.bin": true,
 		"**/*.elf": true,
 		"**/*.o": true
+	},
+	"files.associations": {
+		"*.tcc": "c",
+		"cstring": "c",
+		"string": "c",
+		"exception": "c",
+		"string_view": "c",
+		"fstream": "c",
+		"istream": "c",
+		"ostream": "c",
+		"sstream": "c",
+		"stdexcept": "c",
+		"system_error": "c",
+		"typeinfo": "c",
+		"cstdio": "c"
 	}
 }
